@@ -1,0 +1,72 @@
+.news{
+    &__item:not(:last-child){
+        margin-right: 3px;
+    }
+    &__top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 94px;
+        padding-top: 15px;
+    }
+
+    &__btn{
+        width: 114px;
+        padding-right: 19px;
+        font-family: var(--second-family);
+        font-weight: 600;
+        font-size: 16px;
+        color: #000;
+        background-image: url('./images/arrownewsimg.png');
+        background-position: 100% 50%;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+
+    &__list{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .newscard{
+        outline: 1px solid #8EC543;
+        border-radius: 12px;
+        max-width: 384px;
+        width: 100%;
+        min-height: 170px;
+        padding: 20px 5px 4px 23px;
+
+        &__date{
+            display: block;
+            font-family: var(--second-family);
+            font-weight: 400;
+            font-size: 14px;            
+            color: #565656;
+            margin-bottom: 17px;
+        }
+
+        &__text{
+            font-family: var(--second-family);
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 1.4;
+            color: #000;
+        }
+    }
+}
+
+@media (max-width: 570px){
+    .news{
+        &__list{
+            flex-direction: column;
+        }
+
+        &__item{
+            margin-bottom: 10px;
+        }
+
+        .newscard{
+            max-width: 100%;
+        }
+    }
+}

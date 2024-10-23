@@ -1,0 +1,175 @@
+.certificates{
+    padding-top: 50px;
+    padding-bottom: 65px;
+    &__container{
+        overflow: hidden;
+    }
+
+    &__title{
+        margin-bottom: 30px;
+    }
+
+    &__text{
+        font-family: var(--second-family);
+        font-weight: 400;
+        font-size: 16px;
+        color: #000;
+        margin-bottom: 37px;
+    }
+
+    &__list{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item{
+        width: 23%;
+    }
+
+    &__img{
+        width: 100%;
+        min-height: 375px;
+        background-image: url('./images/certificatesimg.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-size: contain;
+
+    }
+}
+
+@media (max-width: 1230px){
+    .certificates{
+        &__list{
+            flex-wrap: wrap;
+        }
+
+        &__item{
+            margin-bottom: 15px;
+            min-width: 263px;
+        }
+    }
+}
+
+@media (max-width: 570px){
+    .certificates{
+        &__list{
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__item{
+            margin-bottom: 25px;
+        }
+    }
+}
+
+
+
+
+.certificates .swiper2 {
+    position: relative;
+    width: 100%;
+    overflow: visible;
+}
+
+.certificates{
+    .swiper-slide{
+        min-height: 400px;
+        font-family: var(--third-family);
+        font-weight: 500;
+        font-size: 20px;
+        text-transform: uppercase;
+        color: #333;
+        text-align: center;
+    }
+    
+    .swiper-button-certprev{
+        position: absolute;
+        z-index: 15;
+        top: 47%;
+        left: -44px;
+        width: 32px;
+        height: 32px;
+        background-image: url('./images/slidearrowleft.png');
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+    
+    .swiper-button-certnext{
+        position: absolute;
+        z-index: 15;
+        top: 47%;
+        right: -44px;
+        width: 32px;
+        height: 32px;
+        background-image: url('./images/slidearrowright.png');
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+    
+    .swiper-pagination-bullet {
+        background: #fff;
+        opacity: 1;
+    }
+    
+    .swiper-pagination-bullet-active {
+        background: #8ec543;;
+    }
+}
+
+
+@media (max-width: 910px){
+    .certificates {
+        .swiper-button-certprev{
+            top: 47%;
+            left: 3px;
+            z-index: 5;
+        }
+        
+        .swiper-button-certnext{
+            top: 47%;
+            right: 3%;
+            z-index: 5;
+        }
+    }
+}
+
+@media (max-width: 570px){
+    .certificates {
+
+        &__img {
+            min-height: 300px;
+        }
+
+        .swiper2{
+            width: 97%;
+        }
+
+        .swiper-button-certprev{
+            top: 47%;
+            left: 3px;
+            z-index: 5;
+        }
+        
+        .swiper-button-certnext{
+            top: 47%;
+            right: 3%;
+            z-index: 5;
+        }
+
+        .swiper-slide{
+            min-height: 210px;
+          
+        }
+    }
+}
+
+@media (max-width: 380px){
+    .certificates {
+       
+        &__img {
+            min-height: 240px;
+        }
+    }
+}

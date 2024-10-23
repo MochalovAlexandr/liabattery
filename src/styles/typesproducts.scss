@@ -1,0 +1,123 @@
+.typesproducts{
+    padding-top: 36px;
+
+    &__title{
+        margin-bottom: 32px;
+    }
+
+    &__list{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item{
+        max-width: 49%;
+        width: 100%;
+    }
+
+    .typesproductscard{
+        min-height: 300px;
+        border-radius: 12px;
+        background: #fff;
+        padding: 53px 5px 3px 34px;
+
+        &__title{
+            max-width: 55%;
+            margin-bottom: 33px;
+            font-family: var(--second-family);
+            font-weight: 400;
+            font-size: 24px;
+            color: #000;
+        }
+
+        &__descr{
+            font-family: var(--second-family);
+            font-weight: 400;
+            font-size: 16px;
+            color: #000;
+        }
+
+        &__descr2{
+            margin-bottom: 44px;
+            font-family: var(--second-family);
+            font-weight: 400;
+            font-size: 16px;
+            color: #000;
+        }
+
+        &__btn{
+            border: 1px solid #4caf50;
+            border-radius: 10px;
+            width: 126px;
+            height: 38px;
+            font-family: var(--second-family);
+            font-weight: 400;
+            font-size: 16px;
+            color: #4caf50;
+            cursor: pointer;
+            background: transparent;
+        }        
+    }
+
+    .typesproductscard1{
+        background-image: url('./images/typesproductscardimg1.png');
+        background-repeat: no-repeat;
+        background-position: 100% 100%;
+    }
+
+    .typesproductscard2{
+        background-image: url('./images/typesproductscardimg2.png');
+        background-repeat: no-repeat;
+        background-position: 100% 100%;
+
+    }
+}
+
+@media (max-width: 1230px){
+    .typesproducts{
+
+        &__item{
+            align-items: stretch;
+        }
+
+        .typesproductscard {
+            background-size: 120px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+
+            &__btn{
+                margin-top: auto;
+            }
+        }
+    }
+}
+
+@media (max-width: 910px){
+    .typesproducts{
+       
+        .typesproductscard {
+            background-size: 100px;    
+            padding: 53px 15px 20px 34px;       
+        }
+    }
+}
+
+@media (max-width: 570px){
+    .typesproducts{
+       
+        &__list{
+            flex-direction: column;  
+        }
+
+        &__item{
+            max-width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .typesproductscard {
+            background-size: 100px;                     
+        }
+        
+    }
+}

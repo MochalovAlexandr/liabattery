@@ -1,0 +1,80 @@
+
+.pay {
+    padding-top: 25px;
+    padding-bottom: 49px;
+        
+      &__img {
+      max-width: 1200px;
+      width: 100%;
+      min-height: 400px;
+      border-radius: 12px;
+      background-image: url('./images/payimg.png');
+      background-repeat: no-repeat;
+      margin-bottom: 35px;
+      }
+
+      &__title {
+      margin-bottom: 30px;
+      }
+
+      &__title2 {
+      font-family: var(--second-family);
+      font-weight: 400;
+      font-size: 16px;
+      color: #000;
+      line-height: 130%;
+      }
+
+      &__text1 {
+      font-family: var(--second-family);
+      font-weight: 400;
+      font-size: 16px;
+      color: #000;
+      line-height: 130%;
+      }
+
+      &__list1 {
+      padding-left: 23px;    
+      margin-bottom: 25px;
+      }
+
+      &__item1 {
+      list-style: decimals;
+      font-family: var(--second-family);
+      font-weight: 400;
+      font-size: 16px;
+      color: #000;
+      line-height: 137%;
+      }
+
+      &__title3 {
+      font-family: var(--second-family);
+      font-weight: 600;
+      font-size: 20px;
+      color: #000;
+      margin-bottom: 28px;
+      line-height: 130%;
+      }
+
+      &__list2 {
+      padding-left: 25px;
+      }
+
+      &__item2 {
+      list-style: disc;
+      font-family: var(--second-family);
+      font-weight: 400;
+      font-size: 16px;
+      color: #000;
+      line-height: 137%;
+      }
+
+      &__link{
+      font-family: var(--second-family);
+      font-weight: 400;
+      font-size: 16px;
+      color: #000;
+      line-height: 132%;
+        }
+}
+

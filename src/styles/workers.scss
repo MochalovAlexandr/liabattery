@@ -1,0 +1,78 @@
+.workers {
+    padding-top: 30px;
+    padding-bottom: 22px;
+    
+    &__title {
+        margin-bottom: 35px;
+    }
+
+    &__text {
+        font-family: var(--second-family);
+        font-weight: 400;
+        font-size: 16px;
+        color: #000;
+        line-height: 137%;
+        margin-bottom: 28px;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        display: block;
+        margin-right: 2px;
+        min-height: 450px;
+        max-width: 384px;
+        width: 100%;
+        margin-bottom: 26px;
+    }
+
+}
+
+.workerscard {
+    height: 100%;
+    border-radius: 12px;
+    padding: 323px 21px 16px 21px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &__profession {
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 16px;
+        color: #d9d9d9;
+        margin-bottom: 5px;
+    }
+
+    &__workersname {
+        font-family: var(--second-family);
+        font-weight: 600;
+        font-size: 32px;
+        color: #fff;
+        line-height: 130%;
+    }
+}
+
+.workerscard1{
+    background-image: url('./images/workersimg1.png');
+}
+
+.workerscard2{
+    background-image: url('./images/workersimg2.png');
+}
+
+.workerscard3{
+    background-image: url('./images/workersimg3.png');
+}
+
+@media (max-width: 1230px){
+    .workers {
+        
+    
+        &__list {
+            justify-content: space-around;
+        }
+    }    
+}

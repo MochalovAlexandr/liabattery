@@ -1,0 +1,24 @@
+.services{
+
+    &__title{
+        margin-bottom: 39px;
+    }
+
+    &__text{
+        font-family: var(--second-family);
+        font-weight: 400;
+        font-size: 16px;
+        color: #000;
+        line-height: 137%;
+    }
+
+    &__text2{
+        font-family: var(--second-family);
+        font-weight: 400;
+        font-size: 16px;
+        color: #000;
+        line-height: 137%;
+        margin-bottom: 29px;
+    }
+
+}

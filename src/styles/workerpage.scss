@@ -1,0 +1,121 @@
+.workerpage {
+    padding-top: 50px;
+    
+    &__wrapper {
+        max-width: 1200px;
+        width: 100%;
+        min-height: 310px;
+        padding: 6px 9px 6px 386px;
+        background-image: url('./images/workerpageimg.png');
+        background-repeat: no-repeat;
+    }
+
+    &__name {
+        font-family: var(--second-family);
+        font-weight: 600;
+        font-size: 32px;
+        color: #000;
+        margin-bottom: 30px;
+    }
+
+    &__profession {
+        font-family: var(--second-family);
+        font-weight: 400;
+        font-size: 16px;
+        color: #000;
+        margin-bottom: 27px;
+
+    }
+
+    &__aboutme {
+        font-family: var(--second-family);
+        font-weight: 400;
+        font-size: 16px;
+        color: #000;
+        line-height: 137%;
+        margin-bottom: 36px;
+
+    }
+
+    &__list {
+        display: flex;
+        min-height: 67px;
+        align-items: flex-end;
+        border-top: 1px solid #d9d9d9;
+        padding-top: 15px;
+        padding-bottom: 11px;
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 7%;
+
+    }
+
+    &__link {
+        display: block;
+        max-width: 180px;
+        width: 100%;
+        padding-left: 25px;
+        font-family: var(--second-family);
+        font-weight: 400;
+        font-size: 16px;
+        color: #000;
+        background-repeat: no-repeat;
+    }
+
+    &__linktel{
+        background-image: url('./images/contactphoneimg.png');
+    }
+
+    &__linkmail{
+        background-image: url('./images/contactemailimg.png');
+    }
+
+    &__itembtn{
+        margin-left: auto;
+        margin-bottom: -9px;
+        margin-right: -9px;
+
+    }
+
+    &__btn {
+        border: 1px solid #4caf50;
+        border-radius: 10px;
+        width: 204px;
+        height: 38px;
+        font-family: var(--second-family);
+        font-weight: 400;
+        font-size: 16px;
+        text-align: center;
+        color: #4caf50;
+        cursor: pointer;
+    }
+}
+
+
+@media (max-width: 1230px) {
+    .workerpage {
+        padding-top: 50px;
+        
+        &__wrapper {            
+            padding: 6px 9px 6px 225px;
+            background-size: 200px 200px;
+        }
+        &__list{
+            flex-direction: column;  
+            align-items: flex-start;
+        }
+        &__item{
+            margin-bottom: 5px;
+        }
+    }
+}
+
+@media (max-width: 570px) {
+    .workerpage {
+        &__wrapper {            
+            padding: 174px 9px 6px 0px;
+            background-size: 150px 150px;
+        }
+    }
+}

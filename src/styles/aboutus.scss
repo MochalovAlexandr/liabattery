@@ -1,0 +1,119 @@
+.aboutus{
+    
+    &__list{
+        display: flex;
+        border-radius: 12px;
+        background-color: #fff;
+    }
+
+    &__item{
+        position: relative;
+        max-width: 21.5%;
+    }
+
+    &__item:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        width: 1px;
+        height: 116px;
+        right: 0;
+        top: 44px;
+        background-color: #d9d9d9;
+    }
+
+    .aboutuscard{
+        position: relative;
+        padding: 110px 17px 2px 25px;
+        min-height: 200px;
+
+        &__text{
+            text-align: center;
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 133%;
+            text-align: center;
+            color: #000;
+        }
+    }
+
+    
+    .aboutuscard1{
+        background-image: url('./images/aboutusimg1.png');
+        background-repeat: no-repeat;
+        background-position: 50% 30%;
+    }
+
+    .aboutuscard2{
+        background-image: url('./images/aboutusimg2.png');
+        background-repeat: no-repeat;
+        background-position: 50% 30%;
+    }
+    
+    .aboutuscard3{
+        background-image: url('./images/aboutusimg3.png');
+        background-repeat: no-repeat;
+        background-position: 50% 30%;
+    }
+    
+    .aboutuscard4{
+        background-image: url('./images/aboutusimg4.png');
+        background-repeat: no-repeat;
+        background-position: 50% 30%;
+    }
+    
+    .aboutuscard5{
+        background-image: url('./images/aboutusimg5.png');
+        background-repeat: no-repeat;
+        background-position: 50% 30%;
+    }
+}
+
+@media (max-width: 910px) {
+    .aboutus{
+
+        &__list{
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        &__item{
+            max-width: 33%;
+            border-bottom: 1px solid #d9d9d9;
+
+        }
+
+        &__item::after{
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 570px) {
+    .aboutus{
+
+        &__list{
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__item{
+            max-width: 50%;
+        }
+
+        &__text{
+            font-size: 14px;
+        }   
+        
+        .aboutuscard{
+            min-height: 180px;
+            background-size: 35px 35px;
+            padding: 80px 17px 10px 25px;
+            background-position: 50% 20%;
+            &__text{
+                font-size: 14px;
+            }
+        }
+    }
+
+}

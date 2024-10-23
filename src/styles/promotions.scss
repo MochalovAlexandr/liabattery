@@ -1,0 +1,130 @@
+.promotions {
+    padding-top: 30px;
+    padding-bottom: 21px;
+		
+
+		&__title {
+            margin-bottom: 34px;
+		}
+
+		&__text {
+            font-family: var(--second-family);
+            font-weight: 400;
+            font-size: 16px;
+            color: #000;
+            line-height: 130%;
+		}
+
+		&__text2 {
+            font-family: var(--second-family);
+            font-weight: 400;
+            font-size: 16px;
+            color: #000;
+            line-height: 130%;
+            margin-bottom: 31px;
+		}
+
+		&__list {
+            display: flex;
+            flex-wrap: wrap;
+		}
+
+		&__item {
+            min-height: 450px;
+            max-width: 384px;
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 30px;
+		}
+
+        &__item:not(:nth-child(3n)) {            
+            margin-right: 2%;
+		}
+	
+}
+
+.promotionscard {
+    display: block;
+    border-radius: 12px;
+    position: relative;
+    padding: 340px 5px 10px 18px;
+    min-height: 450px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &__discount {
+        position: absolute;
+        display: block;
+        top: 35px;
+        left: 17px;
+        z-index: 10;
+        border-radius: 5px;
+        min-width: 73px;
+        height: 39px;
+        padding: 6px 4px 1px 5px;
+        background: #8ec543;
+        font-family: var(--font-family);
+        font-weight: 800;
+        font-size: 24px;
+        color: #fff;
+    }
+
+    &__text1 {
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 14px;
+        color: #d9d9d9;
+        margin-bottom: 12px;
+    }
+
+    &__text2 {
+        max-width: 97%;
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 20px;
+        color: #fff;
+        line-height: 130%;
+    }
+}
+
+.promotionscardimg1{
+    background-image: url('./images/promotionsimg1.png');
+}
+
+.promotionscardimg2{
+    background-image: url('./images/promotionsimg2.png');
+}
+
+.promotionscardimg3{
+    background-image: url('./images/promotionsimg3.png');
+}
+
+@media (max-width: 1283px){
+
+    .promotions {
+        &__list{
+            justify-content: space-between;
+        }
+        &__item:not(:nth-child(3n)) {            
+            margin-right: 0;
+        }
+
+        &__item{            
+            margin-right: 2px;
+        }
+    }
+        
+}
+
+@media (max-width: 910px){
+
+    .promotions {
+        
+        &__list{
+            flex-direction: column;
+            align-items: center;
+        }
+        
+    }
+        
+}

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+    <link href="images/logotitle.svg" rel="icon">
+    <title>LIA BATTERY-Производитель</title>    
+    <link rel="stylesheet" href="main.css">    
+    <script defer src="app.js" type="text/javascript"></script>    
+</head>
+<body>
+  <!-- Заказать звонок Модальное окно-->
+  <div class="modalcall modalwindow ">  
+    <div class="modalcall__window modalinnerwrap">
+        <div class="modalcall__btnclose btnclose"></div>
+        <h3 class="modalcall__title">Заказать звонок</h3>
+        <p class="modalcall__text">Оставьте ваш телефон и специалист свяжется с вами в ближайшее время!</p>
+        <form class="modalcall__form" action="#" method="post" enctype="multipart/form-data">
+          <input class="modalcall__input modalprice__inputname" type="text" placeholder="Ваше имя" required >
+          <input class="modalcall__input modalprice__inputtel" type="tel" placeholder="Ваш телефон" required >
+          <p class="modalcall__agreement">Нажимая на кнопку "Заказать звонок", я даю свое согласие на обработку
+              персональных данных и принимаю <a class="modalcall__condition" href="#">условия соглашения</a>
+          </p>
+          <button class="modalcall__formbtn" type="button">Заказать звонок</button>
+        </form>
+    </div>
+  </div>
+  <!-- Оставить заявку -->
+  <div class="modalrequest modalwindow ">  
+    <div class="modalrequest__window modalinnerwrap">
+       <div class="modalrequest__btnclose btnclose"></div>
+       <h3 class="modalrequest__title">Оставить заявку</h3>
+       <p class="modalrequest__text">Оставьте ваш телефон и специалист свяжется с вами в ближайшее время!</p>
+       <form class="modalrequest__form" action="#" method="post" enctype="multipart/form-data">
+         <input class="modalrequest__input modalprice__inputname" type="text" placeholder="Ваше имя" required >
+         <input class="modalrequest__input modalprice__inputtel" type="text" placeholder="Ваш телефон" required >
+         <p class="modalrequest__agreement">Нажимая на кнопку "Оставить заявку", я даю свое согласие на обработку
+             персональных данных и принимаю <a class="modalrequest__condition" href="#">условия соглашения</a>
+         </p>
+         <button class="modalrequest__formbtn" type="button">Оставить заявку</button>
+       </form>
+    </div>
+  </div>
+  <div class="wrapper">
+    <header class="header">         
+      <div class="header__container container">
+        <div class="header__top">
+          <div class="header__topleft">
+            <a class="header__logo" href="index.html"></a>
+            <div class="header__sitywrap">
+              <p class="header__sity">Нижний Новгород</p>
+            </div>
+          </div>
+          <ul class="header__topright">
+            <li class="header__itemtel"><a class="header__tel" href="tel:+88003331278">8 (800) 333-12-78</a></li>
+            <li class="header__itemwhatsapp"><a class="header__whatsapp" href="https://www.whatsapp.com">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_11_2005)">
+                <path d="M10.0025 0H9.9975C4.48375 0 0 4.485 0 10C0 12.1875 0.705 14.215 1.90375 15.8612L0.6575 19.5763L4.50125 18.3475C6.0825 19.395 7.96875 20 10.0025 20C15.5162 20 20 15.5138 20 10C20 4.48625 15.5162 0 10.0025 0Z" fill="#4CAF50"/>
+                <path d="M15.8212 14.1213C15.5799 14.8025 14.6224 15.3675 13.8587 15.5325C13.3362 15.6438 12.6537 15.7325 10.3562 14.78C7.41744 13.5625 5.52494 10.5763 5.37744 10.3825C5.23619 10.1888 4.18994 8.80126 4.18994 7.36626C4.18994 5.93126 4.91869 5.23251 5.21244 4.93251C5.45369 4.68626 5.85244 4.57376 6.23494 4.57376C6.35869 4.57376 6.46994 4.58001 6.56994 4.58501C6.86369 4.59751 7.01119 4.61501 7.20494 5.07876C7.44619 5.66001 8.03369 7.09501 8.10369 7.24251C8.17494 7.39001 8.24619 7.59001 8.14619 7.78376C8.05244 7.98376 7.96994 8.07251 7.82244 8.24251C7.67494 8.41251 7.53494 8.54251 7.38744 8.72501C7.25244 8.88376 7.09994 9.05376 7.26994 9.34751C7.43994 9.63501 8.02744 10.5938 8.89244 11.3638C10.0087 12.3575 10.9137 12.675 11.2374 12.81C11.4787 12.91 11.7662 12.8863 11.9424 12.6988C12.1662 12.4575 12.4424 12.0575 12.7237 11.6638C12.9237 11.3813 13.1762 11.3463 13.4412 11.4463C13.7112 11.54 15.1399 12.2463 15.4337 12.3925C15.7274 12.54 15.9212 12.61 15.9924 12.7338C16.0624 12.8575 16.0624 13.4388 15.8212 14.1213Z" fill="#FAFAFA"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_11_2005">
+                <rect width="20" height="20" fill="white"/>
+                </clipPath>
+                </defs>
+                </svg>                
+            </a></li>
+            <li class="header__itemtelegram"><a class="header__telegram" href="https://telegram.org/">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_11_2008)">
+                <path d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20Z" fill="#039BE5"/>
+                <path d="M4.57581 9.78332L14.2175 6.06582C14.665 5.90416 15.0558 6.17499 14.9108 6.85166L14.9116 6.85082L13.27 14.585C13.1483 15.1333 12.8225 15.2667 12.3666 15.0083L9.86664 13.1658L8.66081 14.3275C8.52747 14.4608 8.41497 14.5733 8.15664 14.5733L8.33414 12.0292L12.9675 7.84332C13.1691 7.66582 12.9225 7.56582 12.6566 7.74249L6.93081 11.3475L4.46247 10.5775C3.92664 10.4075 3.91497 10.0417 4.57581 9.78332Z" fill="white"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_11_2008">
+                <rect width="20" height="20" fill="white"/>
+                </clipPath>
+                </defs>
+                </svg>                          
+            </a></li>
+            <li class="header__itemcall"><button class="header__call">ЗАКАЗАТЬ ЗВОНОК</button></li>
+          </ul>
+        </div>
+        <button class="header__burger burger">
+   <span class="header__burgerline"></span>
+  <span class="header__burgerline"></span>
+  <span class="header__burgerline"></span>
+</button>
+<nav class="header__nav">
+          <ul class="header__navlist">
+            <li class="header__navitem"><a class="header__navlink" href="catalog.html">Каталог</a></li>
+            <li class="header__navitem"><a class="header__navlink" href="services.html">Услуги</a></li>
+            <li class="header__navitem"><a class="header__navlink" href="promotions.html">Акции</a></li>
+            <li class="header__navitem"><a class="header__navlink" href="news.html">Новости</a></li>
+            <li class="header__navitem"><a class="header__navlink" href="delivery.html">Доставка</a></li>
+            <li class="header__navitem"><a class="header__navlink" href="pay.html">Оплата</a></li>
+            <li class="header__navitem"><a class="header__navlink" href="aboutpage.html">О&nbsp;компании</a></li>
+            <li class="header__navitem"><a class="header__navlink" href="vacanciespage.html">Вакансии</a></li>
+            <li class="header__navitem"><a class="header__navlink" href="contactspage.html">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="main">  
+      <section class="manufacturer">
+        <div class="container manufacturer__container">
+          <h2 class="manufacturer__title title">Наименование производителя</h2>
+          <div class="manufacturer__wrap">
+            <div class="manufacturer__left">
+              <img src="./images/manufacturerscardimg1.png" alt="Логотип организации">  
+            </div>
+            <div class="manufacturer__right">
+              <p class="manufacturer__text">Текст про производителя. Uzumaki Metallics - представитель крупнейшего производителя цветной и
+                нержавеющей металлопродукции в юго-восточной Азии и Тихоакеанском регионе. Компания основана в
+                1984 году. С 2019 года открыла первое официальное представительство в России.
+              </p>
+              <p class="manufacturer__text">Uzumaki Metallics - признанный во всем мире бренд. Уже две тысячи предприятий по всему миру
+                выбрали продукцию этой компании из-за превосходного соотношения высокого качества и демократичных цен.
+              </p>
+              <p class="manufacturer__text">Текст про производителя. Uzumaki Metallics - представитель крупнейшего производителя цветной и
+                нержавеющей металлопродукции в юго-восточной Азии и Тихоакеанском регионе. Компания основана в
+                1984 году. С 2019 года открыла первое официальное представительство в России.
+              </p>
+              <p class="manufacturer__text">Uzumaki Metallics - признанный во всем мире бренд. Уже две тысячи предприятий по всему миру
+                выбрали продукцию этой компании из-за превосходного соотношения высокого качества и демократичных цен.
+              </p>  
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>    
+    <footer class="footer">
+      <div class="container footer__container">
+          <div class="footer__top">
+              <div class="footer__topleft">
+                  <a class="footer__logo" href="index.html"></a>
+                  <p class="footer__logotext">Завод тяговых литий-ионных аккумуляторных батарей</p>
+                  <p class="footer__logoadress">Офис: г.Екатеринбург, ул. Старых Большевиков, д. 3Д, офис 1201</p>
+                  <p class="footer__logoadress2">Склад: г.Верхняя Пышма, ул. Петрова, д.1, Ангар</p>
+              </div>
+              <div class="footer__topcenter">
+                <ul class="footer__menulist">
+                  <li class="footer__menuitem"><a class="footer__menulink" href="catalog.html">Каталог</a></li>
+                  <li class="footer__menuitem"><a class="footer__menulink" href="services.html">Услуги</a></li>
+                  <li class="footer__menuitem"><a class="footer__menulink" href="pay.html">Оплата</a></li>
+                  <li class="footer__menuitem"><a class="footer__menulink" href="promotions.html">Акции</a></li>
+                  <li class="footer__menuitem"><a class="footer__menulink" href="delivery.html">Доставка</a></li>
+                  <li class="footer__menuitem"><a class="footer__menulink" href="aboutpage.html">О&nbsp;компании</a></li>
+                  <li class="footer__menuitem"><a class="footer__menulink" href="news.html">Новости</a></li>
+                  <li class="footer__menuitem"><a class="footer__menulink" href="vacanciespage.html">Вакансии</a></li>
+                  <li class="footer__menuitem"><a class="footer__menulink" href="contactspage.html">Контакты</a></li>
+                </ul>
+              </div>
+              <div class="footer__topright">
+                  <ul class="footer__tellist">
+                      <li class="footer__telitem"><a class="footer__tellink" href="">8 (800) 333-12-78</a></li>
+                      <li class="footer__telitem"><a class="footer__tellink" href="">7 (343) 237-24-77</a></li>
+                      <li class="footer__telitem footer__mail"><a class="footer__maillink" href="">info@lia-battery.ru</a></li>
+                      <li class="footer__telitembtn"><button class="footer__btn">Оставить заявку</button></li>
+                      <li class="footer__telitem">
+                          <ul class="footer__sociallist">
+                              <li class="footer__socialitem"><a class="footer__sociallink" href="https://www.whatsapp.com/">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <g clip-path="url(#clip0_11_2005)">
+                                  <path d="M10.0025 0H9.9975C4.48375 0 0 4.485 0 10C0 12.1875 0.705 14.215 1.90375 15.8612L0.6575 19.5763L4.50125 18.3475C6.0825 19.395 7.96875 20 10.0025 20C15.5162 20 20 15.5138 20 10C20 4.48625 15.5162 0 10.0025 0Z" fill="#4CAF50"/>
+                                  <path d="M15.8212 14.1213C15.5799 14.8025 14.6224 15.3675 13.8587 15.5325C13.3362 15.6438 12.6537 15.7325 10.3562 14.78C7.41744 13.5625 5.52494 10.5763 5.37744 10.3825C5.23619 10.1888 4.18994 8.80126 4.18994 7.36626C4.18994 5.93126 4.91869 5.23251 5.21244 4.93251C5.45369 4.68626 5.85244 4.57376 6.23494 4.57376C6.35869 4.57376 6.46994 4.58001 6.56994 4.58501C6.86369 4.59751 7.01119 4.61501 7.20494 5.07876C7.44619 5.66001 8.03369 7.09501 8.10369 7.24251C8.17494 7.39001 8.24619 7.59001 8.14619 7.78376C8.05244 7.98376 7.96994 8.07251 7.82244 8.24251C7.67494 8.41251 7.53494 8.54251 7.38744 8.72501C7.25244 8.88376 7.09994 9.05376 7.26994 9.34751C7.43994 9.63501 8.02744 10.5938 8.89244 11.3638C10.0087 12.3575 10.9137 12.675 11.2374 12.81C11.4787 12.91 11.7662 12.8863 11.9424 12.6988C12.1662 12.4575 12.4424 12.0575 12.7237 11.6638C12.9237 11.3813 13.1762 11.3463 13.4412 11.4463C13.7112 11.54 15.1399 12.2463 15.4337 12.3925C15.7274 12.54 15.9212 12.61 15.9924 12.7338C16.0624 12.8575 16.0624 13.4388 15.8212 14.1213Z" fill="#FAFAFA"/>
+                                  </g>
+                                  <defs>
+                                  <clipPath id="clip0_11_2005">
+                                  <rect width="20" height="20" fill="white"/>
+                                  </clipPath>
+                                  </defs>
+                                  </svg>     
+                              </a></li>
+                              <li class="footer__socialitem"><a class="footer__sociallink" href="https://telegram.org/">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <g clip-path="url(#clip0_11_2008)">
+                                  <path d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20Z" fill="#039BE5"/>
+                                  <path d="M4.57581 9.78332L14.2175 6.06582C14.665 5.90416 15.0558 6.17499 14.9108 6.85166L14.9116 6.85082L13.27 14.585C13.1483 15.1333 12.8225 15.2667 12.3666 15.0083L9.86664 13.1658L8.66081 14.3275C8.52747 14.4608 8.41497 14.5733 8.15664 14.5733L8.33414 12.0292L12.9675 7.84332C13.1691 7.66582 12.9225 7.56582 12.6566 7.74249L6.93081 11.3475L4.46247 10.5775C3.92664 10.4075 3.91497 10.0417 4.57581 9.78332Z" fill="white"/>
+                                  </g>
+                                  <defs>
+                                  <clipPath id="clip0_11_2008">
+                                  <rect width="20" height="20" fill="white"/>
+                                  </clipPath>
+                                  </defs>
+                                  </svg>  
+                              </a></li>
+                          </ul>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+          <ul class="footer__bottom">
+              <li class="footer__useragreement">Пользовательское соглашение</li>
+              <li class="footer__personal data">Политика обработки персональных данных</li>
+              <li class="footer__developer">© 2023, Lia Battery | Разработка сайта - IT evolution</li>
+          </ul>
+      </div>
+  </footer>
+  </div>  
+</body>
+</html>

@@ -1,0 +1,105 @@
+.promoname {
+    padding-top: 27px;
+    padding-bottom: 20px;
+		&__img {
+            min-height: 400px;
+            max-width: 1200px;
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 10px;
+            background-image: url('./images/promonameimg.png');
+            background-repeat: no-repeat;
+            margin-bottom: 30px;
+		}
+
+		&__title {
+            margin-bottom: 33px;
+
+		}
+
+		&__text {
+            font-family: var(--second-family);
+            font-weight: 400;
+            font-size: 16px;
+            color: #000;
+            line-height: 130%;
+		}
+
+		&__text2 {
+            font-family: var(--second-family);
+            font-weight: 400;
+            font-size: 16px;
+            color: #000;
+            line-height: 130%;
+		}
+
+		&__text3 {
+            font-family: var(--second-family);
+            font-weight: 400;
+            font-size: 16px;
+            color: #000;
+            line-height: 130%;
+            margin-bottom: 38px;
+		}
+
+		&__title2 {
+            font-family: var(--second-family);
+            font-weight: 600;
+            font-size: 24px;
+            color: #000;
+            margin-bottom: 34px;
+		}
+
+		
+}
+
+.product {
+
+		&__list {
+		}
+
+		&__item {
+		}
+}
+
+
+
+
+.promoname__list{
+    justify-content: start;
+}
+
+.promoname__item{
+    margin-right: 2%;
+}
+
+@media (max-width: 868px){
+      .promoname { 
+
+            &__list{
+                  flex-direction: column;
+                  align-items: center;
+            }
+           
+      }
+
+      .promonamecard{
+            min-height: 560px;
+      }
+}
+
+@media (max-width: 570px){
+      .promoname { 
+
+            &__list{
+                  flex-direction: column;
+                  align-items: center;
+            }
+
+           
+      }
+
+      .promonamecard{
+            min-height: 360px;
+      }
+}
