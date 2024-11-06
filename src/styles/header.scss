@@ -123,8 +123,11 @@
         align-items: center;
     }
 
-    &__navlink{
+    &__navitem {
+        position: relative;
+    }
 
+    &__navlink{
         display: block;
         font-family: var(--font-family);
         font-weight: 400;
@@ -133,6 +136,87 @@
         color: #000;
     }
 
+   
+
+    &__navlinkabout{
+        display: block;
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 133%;
+        color: #000;
+        // position: absolute;
+        // outline: 1px solid #333;
+        // height: 40px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        overflow: hidden;
+        position: absolute;
+         top: -500px; 
+        // top: 56px; 
+        left: -10px;
+        max-width: 240px;
+        min-height: 210px;
+        z-index: 1000;
+        background: transparent;
+         visibility: hidden; 
+        // padding: 30px 5px 5px 26px;
+         opacity: 0; 
+        transition: opacity .2s ease-in-out;
+        outline: none;
+        // outline: 1px solid #333;
+        width: 240px;
+        min-height: 172px;
+        background-color: #fff;
+        padding: 30px 5px 5px 26px;
+        border-radius: 12px;
+        -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+        -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+        box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    }
+
+    // .menu__list{
+    //     width: 240px;
+    //     min-height: 172px;
+    //     background-color: #fff;
+    //     padding: 30px 5px 5px 26px;
+    //     border-radius: 12px;
+
+    // }
+
+    .menu__item{
+        margin-bottom: 20px;
+    }
+
+    .menu__link{
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 133%;
+        color: #000;
+    }
+
+
+
+    .menu__active, .dropdown__active {
+        visibility: visible;
+        opacity: 1;
+        top: 56px;
+    }
+
+    // &__navlinkabout:hover + .menu{
+    //     visibility: visible;
+    //     opacity: 1;
+    //     top: 18px;
+    // }
 }
 
 
@@ -279,6 +363,16 @@
             display: block;
         }
 
+        .menu{
+            max-width: 140px;
+            padding-left: 5px;
+            outline: 1px solid #333;
+        }
+
+        .menu__link {
+            font-size: 14px;
+        }
+
     }
 
     .hader__nav--active {
@@ -342,6 +436,10 @@
         }
 
         &__navlink{
+            font-size: 14px;
+        }
+
+        &__navlinkabout{
             font-size: 14px;
         }
     }

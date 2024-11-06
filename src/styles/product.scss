@@ -62,7 +62,7 @@
         display: flex;
         flex-direction: column;
         height: 100%;
-        padding: 320px 3px 4px 34px;
+        padding: 320px 3px 75px 34px;
         position: relative;
         background-image: url('./images/productimg1.png');
         background-repeat: no-repeat;
@@ -107,6 +107,21 @@
         }
        
     }
+
+    &__text{
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 16px;
+        color: #000;
+    }
+
+    &__text2{
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 16px;
+        color: #000;
+    }
+
 }
 
 .productcard {

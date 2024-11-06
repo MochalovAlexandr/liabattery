@@ -1,4 +1,90 @@
 
+
+/*------Кнопка О компании в Хедере-------------------------------------------------------------------------header--*/
+
+/*------dropdown__simplebar-------------------------------------------------------------------------Слайдер--*/
+//  Показ dropdown по клику
+
+
+// Кнопка О компании
+const btn = document.querySelector(".header__navlinkabout");
+// const btns2 = document.querySelectorAll(".navbottom__link");
+
+// Выпадающее меню
+const dropdown = document.querySelector(".menu");
+
+
+const activeClassdropdowns = "dropdown__active";
+const activeClassbtns = "btn__active";
+
+
+btn?.addEventListener('click', (e)=>{
+  console.log('Ghbdtn!!!');
+  console.log(e);
+  
+  // if (e != dropdown) {
+  //   dropdown.classList.remove('menu__active');
+  // }
+  dropdown.classList.toggle('menu__active');
+ 
+});
+
+document.addEventListener( 'click', (e) => {
+	const withinBoundaries = e.composedPath().includes(dropdown);
+  const withinBtn = e.composedPath().includes(btn);
+
+// Массив елементов, с объекта события до window. Если в нём есть modal, то 
+// окно не закрывается, если нет modal, то мод. окно закрывается.
+console.log(withinBoundaries);
+console.log(withinBtn);
+
+ 
+	if ( ! withinBoundaries === ! withinBtn) {
+    dropdown?.classList.remove('menu__active');
+		// div.style.display = 'none'; // скрываем элемент т к клик был за его пределами
+    console.log('true');
+    
+	}
+})
+
+
+// btns.forEach(item => {
+
+//   item.addEventListener("click", function () {
+//     let DropThis = this.querySelector(".menu");
+//     // console.log(DropThis);
+//     dropdowns.forEach(el => {
+
+//       if (el != DropThis) {
+//         el.classList.remove(activeClassdropdowns)
+//       }
+//     });
+//     btns.forEach(el => {
+//       if (el != this) {
+//         el.classList.remove(activeClassbtns)
+//       }
+//     });
+//     // btns2.forEach(el => {
+//     //   if (el = this) {
+//     //     el.classList.toggle(activeClassbtns)
+//     //   }
+//     // });
+//     DropThis.classList.toggle(activeClassdropdowns);
+//     // this.classList.toggle(activeClassbtns);
+//     document.querySelectorAll(".navbottom__link").forEach(i => {
+
+//       i.addEventListener("click", function () {
+
+//         i.classList.add(activeClassbtns);
+
+//       })
+//     })
+
+//   })
+// });
+
+
+
 /*------Вакансии--подробнее модальное окно-------------------------------------------------------------------------header--*/
 // модальное окно Вакансия
 
@@ -24,7 +110,6 @@ btnmore.forEach((e)=>{
 // Закрыть все модальные окна на кнопку КРЕСТИК
 
 let btnCloseAll = document.querySelectorAll('.btnclose');
-console.log(btnCloseAll);
 
 let modalPageAll = document.querySelectorAll('.modalwindow');
 
@@ -33,7 +118,6 @@ let modalPageAll = document.querySelectorAll('.modalwindow');
 btnCloseAll.forEach((e)=>{
   e.addEventListener('click', ()=>{
     modalPageAll.forEach((e)=>{
-      console.log(e);
       e.classList.remove('modal--active');
       document.body.classList.remove('stop-scroll');
 
@@ -49,8 +133,7 @@ modalPageAll.forEach((el)=>{
   el.addEventListener('click', (e)=>{
     let modalActive = document.querySelector('.modal--active');
 
-    console.log(e.target);
-    console.log(modalActive);
+    
 
     if(e.target===modalActive) {
       e.target.classList.remove('modal--active');
@@ -67,7 +150,6 @@ modalPageAll.forEach((el)=>{
 
 let btnRequestCall= document.querySelector('.header__call');
 let requestCallModal = document.querySelector('.modalcall');
-// console.log(modalWindow);
 
 
 btnRequestCall.addEventListener('click', function () {
@@ -121,7 +203,6 @@ let btnSendResume = document.querySelector('.modalvacancy__button');
 let btnSendResumePage = document.querySelector('.vacancies__btn');
 
 let sendResumeModal = document.querySelector('.modalsendresume');
-console.log(btnSendResume);
 
 
 btnSendResume?.addEventListener('click', function () {
@@ -130,7 +211,6 @@ btnSendResume?.addEventListener('click', function () {
 
   document.body.classList.add('stop-scroll');
 
-  console.log();
   
 
   vacancyModal.classList.remove('modal--active');
@@ -144,7 +224,6 @@ btnSendResumePage?.addEventListener('click', function () {
 
   document.body.classList.add('stop-scroll');
 
-  console.log();
   
 
   vacancyModal.classList.remove('modal--active');
@@ -176,7 +255,6 @@ let menuLinks = menu.querySelectorAll('.header__navlink');
 
 burger.addEventListener('click', function () {
 
-  console.log('burger');
   
 
   burger.classList.toggle('burger--active');
@@ -228,7 +306,6 @@ try {
       el: '.swiper-scrollbar',
     },
   });
-  console.log(swiper);
 } catch (error) {
   console.log(error);
   
@@ -280,7 +357,6 @@ try {
       }
     },
   });
-  console.log(swiper2);
 } catch (error) {
   console.log(error);
   
