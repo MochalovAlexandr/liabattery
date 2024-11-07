@@ -2,13 +2,11 @@
 
 /*------Кнопка О компании в Хедере-------------------------------------------------------------------------header--*/
 
-/*------dropdown__simplebar-------------------------------------------------------------------------Слайдер--*/
 //  Показ dropdown по клику
 
 
 // Кнопка О компании
 const btn = document.querySelector(".header__navlinkabout");
-// const btns2 = document.querySelectorAll(".navbottom__link");
 
 // Выпадающее меню
 const dropdown = document.querySelector(".menu");
@@ -19,12 +17,7 @@ const activeClassbtns = "btn__active";
 
 
 btn?.addEventListener('click', (e)=>{
-  console.log('Ghbdtn!!!');
-  console.log(e);
-  
-  // if (e != dropdown) {
-  //   dropdown.classList.remove('menu__active');
-  // }
+ 
   dropdown.classList.toggle('menu__active');
  
 });
@@ -33,55 +26,14 @@ document.addEventListener( 'click', (e) => {
 	const withinBoundaries = e.composedPath().includes(dropdown);
   const withinBtn = e.composedPath().includes(btn);
 
-// Массив елементов, с объекта события до window. Если в нём есть modal, то 
-// окно не закрывается, если нет modal, то мод. окно закрывается.
-console.log(withinBoundaries);
-console.log(withinBtn);
 
  
 	if ( ! withinBoundaries === ! withinBtn) {
     dropdown?.classList.remove('menu__active');
-		// div.style.display = 'none'; // скрываем элемент т к клик был за его пределами
-    console.log('true');
-    
+  
 	}
+
 })
-
-
-// btns.forEach(item => {
-
-//   item.addEventListener("click", function () {
-//     let DropThis = this.querySelector(".menu");
-//     // console.log(DropThis);
-//     dropdowns.forEach(el => {
-
-//       if (el != DropThis) {
-//         el.classList.remove(activeClassdropdowns)
-//       }
-//     });
-//     btns.forEach(el => {
-//       if (el != this) {
-//         el.classList.remove(activeClassbtns)
-//       }
-//     });
-//     // btns2.forEach(el => {
-//     //   if (el = this) {
-//     //     el.classList.toggle(activeClassbtns)
-//     //   }
-//     // });
-//     DropThis.classList.toggle(activeClassdropdowns);
-//     // this.classList.toggle(activeClassbtns);
-//     document.querySelectorAll(".navbottom__link").forEach(i => {
-
-//       i.addEventListener("click", function () {
-
-//         i.classList.add(activeClassbtns);
-
-//       })
-//     })
-
-//   })
-// });
 
 
 
@@ -95,8 +47,7 @@ let vacancyModal = document.querySelector('.modalvacancy');
 btnmore.forEach((e)=>{
     e.addEventListener('click', function () {
 
-        // burger.classList.toggle('burger--active');
-      
+    
         vacancyModal.classList.add('modal--active');
       
         document.body.classList.add('stop-scroll');

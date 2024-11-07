@@ -129,7 +129,7 @@
 
     &__sociallist{
         display: flex;
-        justify-content: end;
+        justify-content: flex-end;
     }  
 
     &__socialitem:first-child{
@@ -315,7 +315,7 @@
         }
                
         &__sociallist {
-            justify-content: start;
+            justify-content: flex-start;
             padding-bottom: 5px;
         }
 
@@ -340,7 +340,7 @@
 
         &__bottom{
             flex-direction: column;
-            align-items: start;
+            align-items: flex-start;
         }
 
         &__developer{
