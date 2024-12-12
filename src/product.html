@@ -107,7 +107,7 @@
             <li class="header__navitem"><a class="header__navlink" href="news.html">Новости</a></li>
             <li class="header__navitem"><a class="header__navlink" href="delivery.html">Доставка</a></li>
             <li class="header__navitem"><a class="header__navlink" href="pay.html">Оплата</a></li>
-            <li class="header__navitem"><button class="header__navlinkabout" >О&nbsp;компании</button>
+            <li class="header__navitem"><button class="header__navlinkabout header__navlink">О&nbsp;компании</button>
               <div class="menu">
                 <ul class="menu__list">
                   <li class="menu__item">
@@ -122,6 +122,12 @@
                   <li class="menu__item">
                     <a class="menu__link menu__reallink1" href="gostspage.html" >ГОСТы</a>
                   </li>
+                  <li class="menu__item">
+                    <a class="menu__link menu__reallink1" href="hystorypage.html" >История</a>
+                  </li>
+                  <li class="menu__item">
+                    <a class="menu__link menu__reallink1" href="reviewspage.html" >Отзывы клиентов</a>
+                  </li>
                 </ul>
               </div></li>
             <li class="header__navitem"><a class="header__navlink" href="vacanciespage.html">Вакансии</a></li>
@@ -135,11 +141,129 @@
         <div class="container product__container">
           <h2 class="product__title title">Товары</h2>
           <ul class="product__filterlist">
-            <li class="product__filteritem"><button class="product__filterlink"> Фильтр 1</button></li>
-            <li class="product__filteritem"><button class="product__filterlink"> Фильтр 2</button></li>
-            <li class="product__filteritem"><button class="product__filterlink"> Фильтр 3</button></li>
-            <li class="product__filteritem"><button class="product__filterlink"> Фильтр 4</button></li>
-            <li class="product__filteritem product__sort"><button class="product__filterlink">Сортировака</button> </li>
+            <li class="product__filteritem">
+              <button class="product__filterlink">
+                Фильтр 1
+              </button>
+              <span class="product__filterlinkcross"></span>
+              <div class="product__dropdownproduct dropdownproduct">
+                <ul class="product__dropdownproductlist">
+                  <li class="product__dropdownproductitem">
+                    <label class="check-label" for="checkbox-1">
+                      <input class="check visually-hidden checkbox" id="checkbox-1" type="radio" name="check">
+                      <span class="visible-checkbox"></span>
+                      <span class="check-text">1 параметр</span>
+                      <span></span>
+                    </label>
+                  </li>
+                  <li class="product__dropdownproductitem">
+                    <label class="check-label" for="checkbox-2">
+                      <input class="check visually-hidden checkbox" id="checkbox-2" type="radio" name="check">
+                      <span class="visible-checkbox"></span>
+                      <span class="check-text">2 параметр</span>
+                      <span></span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="product__filteritem">
+              <button class="product__filterlink">
+                Фильтр 2
+              </button>
+              <span class="product__filterlinkcross"></span>
+
+              <div class="product__dropdownproduct dropdownproduct">
+                <ul class="product__dropdownproductlist">
+                  <li class="product__dropdownproductitem">
+                    <label class="check-label" for="checkbox-21">
+                      <input class="check visually-hidden checkbox" id="checkbox-21" type="radio" name="check">
+                      <span class="visible-checkbox"></span>
+                      <span class="check-text">1 параметр</span>
+                      <span></span>
+                    </label>
+                  </li>
+                  <li class="product__dropdownproductitem">
+                    <label class="check-label" for="checkbox-22">
+                      <input class="check visually-hidden checkbox" id="checkbox-22" type="radio" name="check">
+                      <span class="visible-checkbox"></span>
+                      <span class="check-text">2 параметр</span>
+                      <span></span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="product__filteritem">
+              <button class="product__filterlink">
+                Фильтр 3
+              </button>
+              <span class="product__filterlinkcross"></span>
+
+              <div class="product__dropdownproduct dropdownproduct">
+                <ul class="product__dropdownproductlist">
+                  <li class="product__dropdownproductitem">
+                    <label class="check-label" for="checkbox-31">
+                      <input class="check visually-hidden checkbox" id="checkbox-31" type="radio" name="check">
+                      <span class="visible-checkbox"></span>
+                      <span class="check-text">1 параметр</span>
+                      <span></span>
+                    </label>
+                  </li>
+                  <li class="product__dropdownproductitem">
+                    <label class="check-label" for="checkbox-32">
+                      <input class="check visually-hidden checkbox" id="checkbox-32" type="radio" name="check">
+                      <span class="visible-checkbox"></span>
+                      <span class="check-text">2 параметр</span>
+                      <span></span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="product__filteritem">
+              <button class="product__filterlink">
+                Фильтр 4
+              </button>
+              <span class="product__filterlinkcross"></span>
+
+              <div class="product__dropdownproduct dropdownproduct">
+                <ul class="product__dropdownproductlist">
+                  <li class="product__dropdownproductitem">
+                    <label class="check-label" for="checkbox-41">
+                      <input class="check visually-hidden checkbox" id="checkbox-41" type="radio" name="check4">
+                      <span class="visible-checkbox"></span>
+                      <span class="check-text">1 параметр</span>
+                      <span></span>
+                    </label>
+                  </li>
+                  <li class="product__dropdownproductitem">
+                    <label class="check-label" for="checkbox-42">
+                      <input class="check visually-hidden checkbox" id="checkbox-42" type="radio" name="check4">
+                      <span class="visible-checkbox"></span>
+                      <span class="check-text">2 параметр</span>
+                      <span></span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="product__filteritem product__sort">
+              <button class="product__filterlink product__sortlink">
+                Сортировка
+              </button>
+              <span class="product__filterlinkcross"></span>
+              <div class="product__dropdownproduct dropdownproduct">
+                <ul class="product__dropdownproductlist product__sortdropdownproductlist">
+                  <li class="product__dropdownproductitem product__sortdropdownproductitem">
+                   По дате
+                  </li>
+                  <li class="product__dropdownproductitem product__sortdropdownproductitem">
+                    По цене
+                  </li>
+                </ul>
+              </div>
+            </li>
         </ul>
         <ul class="product__list">
           <li class="product__item">
@@ -184,7 +308,7 @@
               <span class="productcard__cost">15 000 руб.</span>
             </a>
           </li>
-        </ul>
+        </ul>        
         <p class="product__text">ГОСТ 8240-97. Швеллер - разновидность фасонного проката. Представляет собой продолбное изделие,
             состоящее из двух «полок» и стенки между ними. Швеллеры бывают горячекатанные и гнутые. Горячекатанные
             швеллеры производятся методом прогонки нагретой заготовки через металлургический стан. Гнутые швеллеры производятся из полос 
@@ -221,9 +345,9 @@
               </div>
               <div class="footer__topright">
                   <ul class="footer__tellist">
-                      <li class="footer__telitem"><a class="footer__tellink" href="">8 (800) 333-12-78</a></li>
-                      <li class="footer__telitem"><a class="footer__tellink" href="">7 (343) 237-24-77</a></li>
-                      <li class="footer__telitem footer__mail"><a class="footer__maillink" href="">info@lia-battery.ru</a></li>
+                      <li class="footer__telitem"><a class="footer__tellink" href="tel:+88003331278">8 (800) 333-12-78</a></li>
+                      <li class="footer__telitem"><a class="footer__tellink" href="tel:+73432372477">7 (343) 237-24-77</a></li>
+                      <li class="footer__telitem footer__mail"><a class="footer__maillink" href="mailto:info@lia-battery.ru">info@lia-battery.ru</a></li>
                       <li class="footer__telitembtn"><button class="footer__btn">Оставить заявку</button></li>
                       <li class="footer__telitem">
                           <ul class="footer__sociallist">
@@ -266,5 +390,6 @@
       </div>
   </footer>
   </div>  
+  <!-- <script src="./js/scriptproduct.js"></script> -->
 </body>
 </html>

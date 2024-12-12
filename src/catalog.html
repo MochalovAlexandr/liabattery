@@ -134,7 +134,7 @@
             <li class="header__navitem"><a class="header__navlink" href="news.html">Новости</a></li>
             <li class="header__navitem"><a class="header__navlink" href="delivery.html">Доставка</a></li>
             <li class="header__navitem"><a class="header__navlink" href="pay.html">Оплата</a></li>
-            <li class="header__navitem"><button class="header__navlinkabout" >О&nbsp;компании</button>
+            <li class="header__navitem"><button class="header__navlinkabout header__navlink">О&nbsp;компании</button>
               <div class="menu">
                 <ul class="menu__list">
                   <li class="menu__item">
@@ -148,6 +148,12 @@
                   </li>
                   <li class="menu__item">
                     <a class="menu__link menu__reallink1" href="gostspage.html" >ГОСТы</a>
+                  </li>
+                  <li class="menu__item">
+                    <a class="menu__link menu__reallink1" href="hystorypage.html" >История</a>
+                  </li>
+                  <li class="menu__item">
+                    <a class="menu__link menu__reallink1" href="reviewspage.html" >Отзывы клиентов</a>
                   </li>
                 </ul>
               </div></li>
@@ -177,7 +183,7 @@
                 </div>
                 <div class="swiper-slide">
                   <div class="banner__background">
-                  <h1 class="banner__title">Тяговые LI-ION аккумуляторы (LIFEPO4)</h1>
+                  <h2 class="banner__title">Тяговые LI-ION аккумуляторы (LIFEPO4)</h2>
                   <p class="banner__text">для складской  клининговой техники</p>
                   <span class="banner__cost">от 50 000 руб.</span>
                   <div class="banner__pricewrap">
@@ -187,7 +193,7 @@
                 </div>
                 <div class="swiper-slide">
                   <div class="banner__background">
-                  <h1 class="banner__title">Тяговые LI-ION аккумуляторы (LIFEPO4)</h1>
+                  <h2 class="banner__title">Тяговые LI-ION аккумуляторы (LIFEPO4)</h2>
                   <p class="banner__text">для складской  клининговой техники</p>
                   <span class="banner__cost">от 50 000 руб.</span>
                   <div class="banner__pricewrap">
@@ -197,7 +203,7 @@
                 </div>
                 <div class="swiper-slide">
                   <div class="banner__background">                     
-                  <h1 class="banner__title">Тяговые LI-ION аккумуляторы (LIFEPO4)</h1>
+                  <h2 class="banner__title">Тяговые LI-ION аккумуляторы (LIFEPO4)</h2>
                   <p class="banner__text">для складской  клининговой техники</p>
                   <span class="banner__cost">от 50 000 руб.</span>
                   <div class="banner__pricewrap">
@@ -224,11 +230,11 @@
           <div class="catalog__top">
             <h2 class="catalog__title title">Каталог</h2>
             <ul class="catalog__categorylist">
-              <li class="catalog__categoryitem"><a class="catalog__categorylink" href="#">Категория 1</a></li>
-              <li class="catalog__categoryitem"><a class="catalog__categorylink" href="#">Категория 2</a></li>
-              <li class="catalog__categoryitem"><a class="catalog__categorylink" href="#">Категория 3</a></li>
-              <li class="catalog__categoryitem"><a class="catalog__categorylink" href="#">Категория 4</a></li>
-              <li class="catalog__categoryitem"><a class="catalog__categorylink" href="#">Категория 5</a></li>
+              <li class="catalog__categoryitem categoryitem--active" data-path="1"><button class="catalog__categorylink">Категория 1</button></li>
+              <li class="catalog__categoryitem" data-path="2"><button class="catalog__categorylink">Категория 2</button></li>
+              <li class="catalog__categoryitem" data-path="3"><button class="catalog__categorylink">Категория 3</button></li>
+              <li class="catalog__categoryitem" data-path="4"><button class="catalog__categorylink">Категория 4</button></li>
+              <li class="catalog__categoryitem" data-path="5"><button class="catalog__categorylink">Категория 5</button></li>
             </ul>  
           </div>
           <p class="catalog__text">Наша компания предлагает широкий спектр металлопроката для любого производства и бизнеса.
@@ -239,11 +245,143 @@
           <p class="catalog__text2">Сотрудничаем с оптовыми и розничными клиентами. Доставляем продукцию автомобильными и железнодорожными перевозками. 
               Также возможен самовывоз с нашего склада.
           </p>
-          <div>
+          <div class="catalog__infowrapper catalog__infowrapper--active" data-target="1">
             <ul class="catalog__infolist">
                 <li class="catalog__infoitem categoryimg1 categorycard1">
                   <a href="product.html">
                     <h3 class="catalog__category">Категория 1</h3>
+                    <p class="catalog__categorytext">Аккумуляторные батареи LiFePO4</p>
+                  </a>
+                </li>
+                <li class="catalog__infoitem categoryimg2 categorycard2">
+                  <a href="product.html">
+                    <h3 class="catalog__category">Категория 2</h3>
+                    <p class="catalog__categorytextcard2">Зарядные устройства для Li-ion аккумулятора</p>
+                    <p class="catalog__categorytextcard2bottom">Подбирается в зависимости от ёмкости и напряжения
+                        аккумулятора. Подбирается в зависимости от ёмкости и напряжения
+                        аккумулятора. Подбирается в зависимости от ёмкости и напряжения
+                        аккумулятора.</p>
+                  </a>  
+                  <span class="catalog__cost">От 15 000 руб.</span>
+                </li>
+                <li class="catalog__infoitem categoryimg3 categorycard1">
+                  <a href="product.html">
+                    <h3 class="catalog__category">Категория 3</h3>
+                    <p class="catalog__categorytext">Аккумуляторные батареи LiFePO4</p>
+                  </a>  
+                </li>
+                <li class="catalog__infoitem categoryimg4 categorycard1">
+                  <a href="product.html">
+                    <h3 class="catalog__category">Категория 4</h3>
+                    <p class="catalog__categorytext">Аккумуляторные батареи LiFePO4</p>
+                  </a>  
+                </li>
+            </ul>
+          </div>
+          <div class="catalog__infowrapper" data-target="2">
+            <ul class="catalog__infolist">
+                <li class="catalog__infoitem categoryimg2 categorycard2">
+                  <a href="product.html">
+                    <h3 class="catalog__category">Категория 2</h3>
+                    <p class="catalog__categorytextcard2">Зарядные устройства для Li-ion аккумулятора</p>
+                    <p class="catalog__categorytextcard2bottom">Подбирается в зависимости от ёмкости и напряжения
+                        аккумулятора. Подбирается в зависимости от ёмкости и напряжения
+                        аккумулятора. Подбирается в зависимости от ёмкости и напряжения
+                        аккумулятора.</p>
+                  </a>  
+                  <span class="catalog__cost">От 15 000 руб.</span>
+                </li>
+                <li class="catalog__infoitem categoryimg1 categorycard1">
+                  <a href="product.html">
+                    <h3 class="catalog__category">Категория 12</h3>
+                    <p class="catalog__categorytext">Аккумуляторные батареи LiFePO4</p>
+                  </a>
+                </li>
+                <li class="catalog__infoitem categoryimg3 categorycard1">
+                  <a href="product.html">
+                    <h3 class="catalog__category">Категория 3</h3>
+                    <p class="catalog__categorytext">Аккумуляторные батареи LiFePO4</p>
+                  </a>  
+                </li>
+                <li class="catalog__infoitem categoryimg4 categorycard1">
+                  <a href="product.html">
+                    <h3 class="catalog__category">Категория 4</h3>
+                    <p class="catalog__categorytext">Аккумуляторные батареи LiFePO4</p>
+                  </a>  
+                </li>
+            </ul>
+          </div>
+          <div class="catalog__infowrapper" data-target="3">
+            <ul class="catalog__infolist">
+                <li class="catalog__infoitem categoryimg2 categorycard2">
+                  <a href="product.html">
+                    <h3 class="catalog__category">Категория 2</h3>
+                    <p class="catalog__categorytextcard2">Зарядные устройства для Li-ion аккумулятора</p>
+                    <p class="catalog__categorytextcard2bottom">Подбирается в зависимости от ёмкости и напряжения
+                        аккумулятора. Подбирается в зависимости от ёмкости и напряжения
+                        аккумулятора. Подбирается в зависимости от ёмкости и напряжения
+                        аккумулятора.</p>
+                  </a>  
+                  <span class="catalog__cost">От 15 000 руб.</span>
+                </li>
+                <li class="catalog__infoitem categoryimg3 categorycard1">
+                  <a href="product.html">
+                    <h3 class="catalog__category">Категория 3</h3>
+                    <p class="catalog__categorytext">Аккумуляторные батареи LiFePO4</p>
+                  </a>  
+                </li>
+                <li class="catalog__infoitem categoryimg1 categorycard1">
+                  <a href="product.html">
+                    <h3 class="catalog__category">Категория 13</h3>
+                    <p class="catalog__categorytext">Аккумуляторные батареи LiFePO4</p>
+                  </a>
+                </li>
+                <li class="catalog__infoitem categoryimg4 categorycard1">
+                  <a href="product.html">
+                    <h3 class="catalog__category">Категория 4</h3>
+                    <p class="catalog__categorytext">Аккумуляторные батареи LiFePO4</p>
+                  </a>  
+                </li>
+            </ul>
+          </div>
+          <div class="catalog__infowrapper" data-target="4">
+            <ul class="catalog__infolist">
+                <li class="catalog__infoitem categoryimg1 categorycard1">
+                  <a href="product.html">
+                    <h3 class="catalog__category">Категория 14</h3>
+                    <p class="catalog__categorytext">Аккумуляторные батареи LiFePO4</p>
+                  </a>
+                </li>
+                <li class="catalog__infoitem categoryimg3 categorycard1">
+                  <a href="product.html">
+                    <h3 class="catalog__category">Категория 3</h3>
+                    <p class="catalog__categorytext">Аккумуляторные батареи LiFePO4</p>
+                  </a>  
+                </li>
+                <li class="catalog__infoitem categoryimg2 categorycard2">
+                  <a href="product.html">
+                    <h3 class="catalog__category">Категория 2</h3>
+                    <p class="catalog__categorytextcard2">Зарядные устройства для Li-ion аккумулятора</p>
+                    <p class="catalog__categorytextcard2bottom">Подбирается в зависимости от ёмкости и напряжения
+                        аккумулятора. Подбирается в зависимости от ёмкости и напряжения
+                        аккумулятора. Подбирается в зависимости от ёмкости и напряжения
+                        аккумулятора.</p>
+                  </a>  
+                  <span class="catalog__cost">От 15 000 руб.</span>
+                </li>
+                <li class="catalog__infoitem categoryimg4 categorycard1">
+                  <a href="product.html">
+                    <h3 class="catalog__category">Категория 4</h3>
+                    <p class="catalog__categorytext">Аккумуляторные батареи LiFePO4</p>
+                  </a>  
+                </li>
+            </ul>
+          </div>
+          <div class="catalog__infowrapper" data-target="5">
+            <ul class="catalog__infolist">
+                <li class="catalog__infoitem categoryimg1 categorycard1">
+                  <a href="product.html">
+                    <h3 class="catalog__category">Категория 15</h3>
                     <p class="catalog__categorytext">Аккумуляторные батареи LiFePO4</p>
                   </a>
                 </li>
@@ -299,9 +437,9 @@
               </div>
               <div class="footer__topright">
                   <ul class="footer__tellist">
-                      <li class="footer__telitem"><a class="footer__tellink" href="">8 (800) 333-12-78</a></li>
-                      <li class="footer__telitem"><a class="footer__tellink" href="">7 (343) 237-24-77</a></li>
-                      <li class="footer__telitem footer__mail"><a class="footer__maillink" href="">info@lia-battery.ru</a></li>
+                      <li class="footer__telitem"><a class="footer__tellink" href="tel:+88003331278">8 (800) 333-12-78</a></li>
+                      <li class="footer__telitem"><a class="footer__tellink" href="tel:+73432372477">7 (343) 237-24-77</a></li>
+                      <li class="footer__telitem footer__mail"><a class="footer__maillink" href="mailto:info@lia-battery.ru">info@lia-battery.ru</a></li>
                       <li class="footer__telitembtn"><button class="footer__btn">Оставить заявку</button></li>
                       <li class="footer__telitem">
                           <ul class="footer__sociallist">

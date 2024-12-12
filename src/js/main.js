@@ -33,7 +33,22 @@ document.addEventListener( 'click', (e) => {
   
 	}
 
-})
+
+
+  // закрыть меню в Фильтре товары по клику вне меню
+  let target = e.target;
+  
+  let menu = document.querySelectorAll(".dropdownproduct");
+
+  menu.forEach(elem => {
+    if (!target.closest(".product__filteritem")) {
+      elem.classList.remove(activeClassdropdownsProduct);
+      document.querySelectorAll(".navbottom__link").forEach(el => {
+        el.classList.remove(activeClassbtns);
+      })
+    }
+  });
+});
 
 
 
@@ -128,6 +143,38 @@ btnLeaveRequest.addEventListener('click', function () {
   document.body.classList.add('stop-scroll');
   
 });
+
+/*------Карточка товара Оставить заявку модальное окно-------------------------------------------------------------------------header--*/
+// модальное окно Оставить заявку
+
+let btnOrder= document.querySelector('.productitem__costbtnorder');
+let orderModal = document.querySelector('.modalrequest');
+
+
+btnOrder?.addEventListener('click', function () {
+  
+  orderModal.classList.add('modal--active');
+
+  document.body.classList.add('stop-scroll');
+  
+});
+
+/*------Карточка товара Заказать звонок модальное окно-------------------------------------------------------------------------header--*/
+// модальное окно Заказать звонок
+
+let btnRequestCallCard = document.querySelector('.productitem__call');
+let requestCallModalCard = document.querySelector('.modalcall');
+
+
+btnRequestCallCard?.addEventListener('click', function () {
+
+    // burger.classList.toggle('burger--active');
+  
+    requestCallModalCard.classList.add('modal--active');
+  
+    document.body.classList.add('stop-scroll');
+  
+  });
 
 /*------Скачать прайс-лист модальное окно-------------------------------------------------------------------------header--*/
 // модальное окно Скачать прайс-лист
@@ -354,9 +401,236 @@ function init() {
 }
 
 
+/*------Табы в меню карточки товара-------------------------------------------------------------------------Табы--*/
 
 
 
+let tabsBtn = document.querySelectorAll('.productitem__menulink'); 
+let tabsItem = document.querySelectorAll('.productitem__tabwrapper');
+
+tabsBtn.forEach(function (element) {
+  element.addEventListener('click', function (e) {
+    const path = e.currentTarget.dataset.path;
+
+    tabsBtn.forEach(function (btn) { btn.classList.remove('productitem__menulink--active') });
+    e.currentTarget.classList.add('productitem__menulink--active');
+
+    tabsItem.forEach(function (element) { element.classList.remove('productitem__tabwrapper--active') });
+    document.querySelector(`[data-target="${path}"]`).classList.add('productitem__tabwrapper--active');
+  });
+});
+
+
+/*------Слайдер в меню карточки товара-------------------------------------------------------------------------Слайдер--*/
+
+try {
+  const swiper7 = new Swiper('.productitem__swiper', {
+    loop: true,
+    // spaceBetween: 44,
+    slidesPerView: 4,
+    // observer: true,
+    // observeParents: true,
+    // observeSlideChildren: true,
+    // autoplay: {
+    //   delay: 3000,
+    //   },
+    // If we need pagination
+    // pagination: {
+    //   el: '.swiper-pagination',
+    //   clickable: true,
+    // },
+    // speed: 2300,
+    // Navigation arrows
+    // navigation: {
+    //   nextEl: '.swiper-button-nextbanner',
+    //   prevEl: '.swiper-button-prevbanner',
+    // },
+  
+    // And if we need scrollbar
+    // scrollbar: {
+    //   el: '.swiper-scrollbar',
+    // },
+  });
+} catch (error) {
+  console.log(error);
+  
+}
+
+/*------Табы в меню карточки товара-------------------------------------------------------------------------Табы--*/
+
+
+
+let tabsBtn1 = document.querySelectorAll('.productitem__cardtopleftitem'); 
+let tabsItem1 = document.querySelectorAll('.productitem__tabwrapper12');
+let block = document.querySelector('.productitem__cardtopleftimg');
+
+tabsBtn1.forEach(function (element) {
+  element.addEventListener('click', function (e) {
+    // получить все стили элемента
+
+    const styles = window.getComputedStyle(e.target);
+    
+    
+    block.style.backgroundImage = styles.backgroundImage;
+
+    const path = e.currentTarget.dataset.path;
+
+    tabsBtn1.forEach(function (btn) { btn.classList.remove('productitem__cardtopleftitem--active') });
+    e.currentTarget.classList.add('productitem__cardtopleftitem--active');
+
+  });
+});
+
+
+
+/*------dropdown__-------------------------------------------------------------------------dropdown__--*/
+//  Показ dropdown по клику
+
+const btns = document.querySelectorAll(".product__filteritem");
+
+
+const dropdowns = document.querySelectorAll(".dropdownproduct");
+const activeClassdropdownsProduct = "dropdownproduct__active";
+const activeClassbtnsProduct = "btn__active";
+
+btns.forEach(item => {
+  
+
+   // выбор фильтра
+       
+
+   let checkAll = item.querySelectorAll('.check-label');
+
+   let filterTextFirst = item.querySelector('.product__filterlink').textContent;
+  
+  item.addEventListener("click", function (element) {
+
+   
+
+   
+
+   Array.from(checkAll).forEach((el)=>{
+    el.addEventListener('click', function(e){
+     e.stopPropagation();
+
+        
+    item.querySelector('.product__filterlink').textContent = this.querySelector('.check-text').textContent;
+    item.querySelector('.product__filterlink').style.color = '#4caf50';
+    
+
+    let filterLinkCross = item.querySelector('.product__filterlinkcross');
+    
+    
+    filterLinkCross.classList.add('filterlinkcross--active');
+
+    filterLinkCross.addEventListener('click', function(e){
+      e.stopPropagation();
+      filterLinkCross.classList.remove('filterlinkcross--active');
+      item.querySelector('.product__filterlink').textContent = filterTextFirst;
+      item.querySelector('.product__filterlink').style.color = '#565656';
+    });
+
+
+
+    });
+   }); 
+
+
+    let DropThis = this.querySelector(".dropdownproduct");
+    
+    
+    // работает. закрывает по клику на другие кнопки
+    dropdowns.forEach(el => {
+      if (el != DropThis) {
+        el.classList.remove(activeClassdropdownsProduct)
+      }
+    });
+
+    btns.forEach(el => {
+      if (el != this) {
+        el.classList.remove(activeClassbtnsProduct)
+      }
+    });
+    
+
+    DropThis.classList.toggle(activeClassdropdownsProduct);
+
+
+    document.querySelectorAll(".header__navlink").forEach(i => {
+
+      i.addEventListener("click", function () {
+
+        i.classList.add(activeClassbtnsProduct);
+
+      })
+    })
+
+  })
+});
+
+// Выбор фильтра 
+
+
+let productSortBtn = document.querySelector('.product__sort');
+
+//Элементы в списке сортировка
+
+let itemSortArr = document.querySelectorAll('.product__sortdropdownproductitem');
+
+let filterTextFirst = productSortBtn?.querySelector('.product__filterlink').textContent;
+
+productSortBtn?.addEventListener("click", function (element) {
+
+    
+
+  Array.from(itemSortArr).forEach((el)=>{
+   el.addEventListener('click', function(e){
+    e.stopPropagation();
+
+    
+  productSortBtn.querySelector('.product__sortlink').textContent = this.textContent;
+
+   productSortBtn.querySelector('.product__sortlink').style.color = '#4caf50';
+  
+   
+   
+    let filterLinkCross = productSortBtn.querySelector('.product__filterlinkcross');
+      
+      
+    filterLinkCross.classList.add('filterlinkcross--active');
+
+    filterLinkCross.addEventListener('click', function(e){
+      e.stopPropagation();
+      filterLinkCross.classList.remove('filterlinkcross--active');
+      productSortBtn.querySelector('.product__filterlink').textContent = filterTextFirst;
+      productSortBtn.querySelector('.product__filterlink').style.color = '#565656';
+    });
+
+
+
+   });
+  }); 
+
+ })
+ 
+
+/*------Табы-Категории-------------------------------------------------------------------------Табы--*/
+// Табы 
+
+let tabsBtnCatalog = document.querySelectorAll('.catalog__categoryitem');
+let tabsItemCatalog = document.querySelectorAll('.catalog__infowrapper');
+
+tabsBtnCatalog.forEach(function (element) {
+  element.addEventListener('click', function (e) {
+    const path = e.currentTarget.dataset.path;
+
+    tabsBtnCatalog.forEach(function (btn) { btn.classList.remove('categoryitem--active') });
+    e.currentTarget.classList.add('categoryitem--active');
+
+    tabsItemCatalog.forEach(function (element) { element.classList.remove('catalog__infowrapper--active') });
+    document.querySelector(`[data-target="${path}"]`).classList.add('catalog__infowrapper--active');
+  });
+});
 
 
 

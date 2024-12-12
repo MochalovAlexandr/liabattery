@@ -12,7 +12,6 @@
         padding: 76px 40px 25px 77px;
         margin-bottom: 15px;
         margin-bottom: 42px;
-        // outline: 1px solid #333;
     }
 
     &__cardtop{
@@ -28,10 +27,17 @@
         max-width: 433px;
         margin-right: 5px;
         width: 100%;
-        min-height: 468px;
-        // outline: 1px solid #333;
-        background-image: url('./images/cardtopleftimg.png');
+        min-height: 468px;    
+    }
+
+    &__cardtopleftimg{
+        width: 100%;
+        height: 100%;
+        background-image: url('./images/2bigcardtopleftimg.png');
+        background-size: contain;
+        background-position: center center;
         background-repeat: no-repeat;
+        margin-bottom: 5px;
     }
 
     &__cardtopleftlist{
@@ -39,7 +45,16 @@
         justify-content: space-between;
     }
 
+    &__swiper{
+        max-height: 102px;
+        width: 100%;
+        overflow: hidden;
+    }
 
+    .swiper-slide{
+        min-height: 50px;
+    }
+   
     &__cardtopleftitem{
         border: 1px solid rgba(0, 0, 0, 0.12);
         border-radius: 12px;
@@ -51,6 +66,22 @@
         cursor: pointer;
     }
 
+    .cardtopleftitemimg1{
+        background-image: url('./images/cardtopleftimg1.png');
+    }
+
+    .cardtopleftitemimg2{
+        background-image: url('./images/cardtopleftimg2.png');
+    }
+
+    .cardtopleftitemimg3{
+        background-image: url('./images/cardtopleftimg3.png');
+    }
+
+    .cardtopleftitemimg4{
+        background-image: url('./images/cardtopleftimg4.png');
+    }
+
     &__cardtopleftitem--active{
         border: 1px solid  #4caf50;
     }
@@ -59,10 +90,8 @@
 
     &__cardtopright{
         width: 100%;
-        // width: 100%;
         padding: 0 5px 0 70px;
         min-height: 50px;
-        // outline: 1px solid #333;
     }
 
     &__name{
@@ -83,7 +112,6 @@
 
     &__deliveryinfoitem{
         width: 31.3%;
-        // outline: 1px solid #333;
         padding: 0 2px 0 33px;
         font-family: var(--second-family);
         font-weight: 400;
@@ -111,22 +139,15 @@
         max-width: 442px;
         justify-content: space-between;
         align-items: center;
-        // outline: 1px solid #333;
         margin-bottom: 42px;
     }
 
     &__cost{
-        display: block;
-        // border-radius: 12px;
-        // width: 204px;
-        // height: 50px;
-        // padding: 14px 23px;
-        // background: #4caf50;
+        display: block;       
         font-family: var(--second-family);
         font-weight: 600;
         font-size: 32px;
         color: #000;
-        // margin-bottom: 42px;
     }
 
     &__costbtnorder{
@@ -178,7 +199,6 @@
     }
 
     &__characteristicslist{
-        // outline: 1px solid #333;
         padding: 0 33px 0 0;
     }
 
@@ -195,7 +215,6 @@
 
     &__characteristicsitem:nth-child(odd){
         background: rgba(76, 175, 80, 0.05);
-        // background: #000;
     }
 
     &__characteristicsitem span{
@@ -210,6 +229,30 @@
         color: #000;
     }
 
+    &__tabwrapper{
+        display: none;
+        min-height: 269px;
+    }
+
+    &__reviewsname{
+        font-family: var(--second-family);
+        font-weight: 600;
+        font-size: 20px;
+        color: #000;
+    }
+
+    &__reviewswork{
+        font-family: var(--second-family);
+        font-weight: 400;
+        font-size: 16px;
+        color: #000;
+        margin-bottom: 25px;
+    }
+
+    &__tabwrapper--active{
+        display: block;
+    }
+
     &__prodtext{
         max-width: 95%;
         font-family: var(--second-family);
@@ -218,6 +261,14 @@
         color: #000;
         line-height: 137%;
         margin-bottom: 20px;
+    }
+
+    &__prodtextdoc{
+        margin-bottom: 32px;
+    }
+
+    &__prodtextreview{
+        margin-bottom: 30px;
     }
 
     &__propertieslist{
@@ -234,7 +285,6 @@
         padding-left: 43px;
         padding-top: 4px;
         width: 50%;
-        // outline: 1px solid #333;
         font-family: var(--second-family);
         font-weight: 400;
         font-size: 16px;
@@ -246,10 +296,34 @@
         background-position: 0 50%;
     }
 
+    &__filelist{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__fileitem{
+        margin-right: 23px;
+        margin-bottom: 5px;
+    }
+
+    &__filelink{
+        display: flex;
+        align-items: center;
+        padding-left: 41px;
+        padding-right: 5px;
+        font-family: var(--second-family);
+        font-weight: 400;
+        font-size: 14px;
+        color: #000;
+        min-height: 30px;
+        background-image: url('./images/filelinkimg.png');
+        background-repeat: no-repeat;
+        background-position: left center;
+    }
+
     &__cardbottom{
         display: flex;
         justify-content: space-between;
-        // outline: 1px solid #333;
         padding-right: 25px;
     }
 
@@ -322,7 +396,6 @@
     }
 
     &__consultationwrap{
-        // outline: 1px solid #333;
         min-height: 245px;
         display: flex;
         flex-direction: column;
@@ -346,7 +419,6 @@
         bottom: 0;
         left: 73px;
         z-index: 100;
-        // outline: 1px solid #333;
         min-height: 225px;
         width: 225px;
         background-image: url('./images/consultationitemimg.png');
@@ -368,10 +440,7 @@
     }
 
     &__itemcall{
-        // width: 177px;
-        // height: 40px;
         margin-left: auto;
-        // padding: 9px 3px 2px 4px;
         padding: 11px 20px;
         background: linear-gradient(270deg, #4caf50 0%, #8ec543 100%);
         border-radius: 10px;
@@ -482,6 +551,7 @@
 
         &__prodwrapper{
             padding: 5px 7px;
+            padding-bottom: 15px;
         }
 
         &__cardtopleft{
@@ -492,12 +562,14 @@
         }
 
         &__cardtopleftitem {
-            // border: 1px solid rgba(0, 0, 0, .12);
-            // border-radius: 12px;
             width: 85px;
             height: 85px;
         }
 
+        &__swiper {
+            max-height: 85px;
+        }
+            
         &__name{
             font-size: 16px;
         }
@@ -547,7 +619,6 @@
 
         &__consultationlist{
             flex-direction: column;
-            // align-items: center;
         }
 
         &__consultationlist{
@@ -572,23 +643,19 @@
 
 @media (max-width: 450px){
     .productitem{
-
-        // &__prodwrapper{
-        //     padding: 5px 7px;
-        // }
+       
 
         &__cardtopleft{
-            // max-width: 100%;
             min-height: 255px;
-            // background-size: 50%;
-            // background-position: center 0;
         }
 
         &__cardtopleftitem {
-            // border: 1px solid rgba(0, 0, 0, .12);
-            // border-radius: 12px;
             width: 66px;
             height: 70px;
+        }
+
+        &__swiper {
+            max-height: 70px;
         }
 
        &__cost {

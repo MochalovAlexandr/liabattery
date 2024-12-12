@@ -14,7 +14,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link href="images/logotitle.svg" rel="icon">
     <title>LIA BATTERY-Товары</title>    
     <link rel="stylesheet" href="main.css">    
@@ -51,6 +56,37 @@
          </p>
          <button class="modalrequest__formbtn" type="button">Оставить заявку</button>
        </form>
+    </div>
+  </div>
+  <!-- Оставить отзыв -->
+  <div class="modalreview modalwindow">  
+    <div class="modalreview__window modalinnerwrap">
+        <div class="modalreview__btnclose btnclose"></div>
+        <h3 class="modalreview__title">Оставить отзыв</h3>
+        <form class="modalreview__form" action="#" method="post" enctype="multipart/form-data">
+            <div class="modalreview__inputwrap">
+              <input class="modalreview__input modalprice__inputname" type="text" placeholder="Ваше имя" required name="имя">
+              <input class="modalreview__input modalprice__inputprof" type="text" placeholder="Ваша должность" required name="должность">
+              <input class="modalreview__input modalprice__inputmail" type="text" placeholder="Ваш e-mail" required name="e-mail">
+              <input class="modalreview__input modalprice__inputtel" type="text" placeholder="Ваш телефон" required name="телефон">
+            </div>
+            <textarea class="modalreview__textarea" placeholder="Текст отзыва"  name="" id="" cols="30" rows="10"></textarea>
+            <div class="modalreview__btnwrap">
+
+              <div class="modalreview__btnwrapitem">
+                <button class="modalreview__btn modalreview__btnphoto">Ваша фотография</button>
+              </div>
+              <div class="modalreview__btnwrapitem">
+                <button class="modalreview__btn modalreview__btnlist">Прикрепить файл</button>
+              </div>
+            </div>
+            <div class="modalreview__bottom">
+              <button class="modalreview__formbtn" type="button">Отправить отзыв</button>
+              <p class="modalreview__agreement">Нажимая на кнопку "Отправить отзыв", я даю свое согласие на обработку
+                персональных данных и принимаю <a class="modalreview__condition" href="#">условия соглашения</a>
+              </p>
+            </div>
+        </form>
     </div>
   </div>
   <div class="wrapper">
@@ -107,7 +143,7 @@
             <li class="header__navitem"><a class="header__navlink" href="news.html">Новости</a></li>
             <li class="header__navitem"><a class="header__navlink" href="delivery.html">Доставка</a></li>
             <li class="header__navitem"><a class="header__navlink" href="pay.html">Оплата</a></li>
-            <li class="header__navitem"><button class="header__navlinkabout" >О&nbsp;компании</button>
+            <li class="header__navitem"><button class="header__navlinkabout header__navlink">О&nbsp;компании</button>
               <div class="menu">
                 <ul class="menu__list">
                   <li class="menu__item">
@@ -121,6 +157,12 @@
                   </li>
                   <li class="menu__item">
                     <a class="menu__link menu__reallink1" href="gostspage.html" >ГОСТы</a>
+                  </li>
+                  <li class="menu__item">
+                    <a class="menu__link menu__reallink1" href="hystorypage.html" >История</a>
+                  </li>
+                  <li class="menu__item">
+                    <a class="menu__link menu__reallink1" href="reviewspage.html" >Отзывы клиентов</a>
                   </li>
                 </ul>
               </div></li>
@@ -137,12 +179,65 @@
           <div class="productitem__prodwrapper">
             <div class="productitem__cardtop">
               <div class="productitem__cardtopleft">
-                <ul class="productitem__cardtopleftlist">
-                  <li class="productitem__cardtopleftitem productitem__cardtopleftitem--active"></li>
+                <div class="productitem__cardtopleftimg"></div>
+                <div class="productitem__cardtopleftlist">
+                  <!-- Slider main container -->
+                    <div class="productitem__swiper">
+                      <!-- Additional required wrapper -->
+                      <div class="swiper-wrapper productitem__swiperwrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                          <div class="productitem__cardtopleftitem productitem__cardtopleftitem--active cardtopleftitemimg1" data-path="11"></div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="productitem__cardtopleftitem cardtopleftitemimg2" data-path="12"></div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="productitem__cardtopleftitem cardtopleftitemimg3" data-path="13"></div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="productitem__cardtopleftitem cardtopleftitemimg4" data-path="14"></div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="productitem__cardtopleftitem cardtopleftitemimg1" data-path="15"></div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="productitem__cardtopleftitem cardtopleftitemimg2" data-path="16"></div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="productitem__cardtopleftitem cardtopleftitemimg3" data-path="17"></div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="productitem__cardtopleftitem cardtopleftitemimg4" data-path="18"></div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="productitem__cardtopleftitem cardtopleftitemimg1" data-path="19"></div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="productitem__cardtopleftitem cardtopleftitemimg2" data-path="20"></div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="productitem__cardtopleftitem cardtopleftitemimg3" data-path="21"></div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="productitem__cardtopleftitem cardtopleftitemimg4" data-path="22"></div>
+                        </div>
+                      </div>
+                      <!-- If we need pagination -->
+                      <!-- <div class="swiper-pagination"></div> -->
+
+                      <!-- If we need navigation buttons -->
+                      <!-- <div class="swiper-button-prev"></div> -->
+                      <!-- <div class="swiper-button-next"></div> -->
+
+                      <!-- If we need scrollbar -->
+                      <!-- <div class="swiper-scrollbar"></div> -->
+                    </div>
+                  <!-- <li class="productitem__cardtopleftitem productitem__cardtopleftitem--active"></li>
                   <li class="productitem__cardtopleftitem"></li>
                   <li class="productitem__cardtopleftitem"></li>
-                  <li class="productitem__cardtopleftitem"></li>
-                </ul>
+                  <li class="productitem__cardtopleftitem"></li> -->
+                </div>
               </div>
               <div class="productitem__cardtopright">
                 <h3 class="productitem__name">Тяговый литий-ионный аккумулятор LIA Battery LFP (Напряжение
@@ -168,41 +263,181 @@
                 <li class="productitem__deliveryinfoitem productitem__deliveryinfoitemimg3">Самовывоз: со склада в г.Екатеринбурге</li>
             </ul>
             <ul class="productitem__menulist">
-              <li class="productitem__menuitem"><button class="productitem__menulink productitem__menulink--active">Комплектация</button></li>
-              <li class="productitem__menuitem"><button class="productitem__menulink">Характеристики</button></li>
-              <li class="productitem__menuitem"><button class="productitem__menulink">Документы</button></li>
-              <li class="productitem__menuitem"><button class="productitem__menulink">Оплата</button></li>
-              <li class="productitem__menuitem"><button class="productitem__menulink">Доставка</button></li>
-              <li class="productitem__menuitem"><button class="productitem__menulink">Наличие</button></li>
-              <li class="productitem__menuitem"><button class="productitem__menulink">Отзывы</button></li>
+              <li class="productitem__menuitem"><button class="productitem__menulink productitem__menulink--active" data-path="1">Комплектация</button></li>
+              <li class="productitem__menuitem"><button class="productitem__menulink" data-path="2">Характеристики</button></li>
+              <li class="productitem__menuitem"><button class="productitem__menulink" data-path="3">Документы</button></li>
+              <li class="productitem__menuitem"><button class="productitem__menulink" data-path="4">Оплата</button></li>
+              <li class="productitem__menuitem"><button class="productitem__menulink" data-path="5">Доставка</button></li>
+              <li class="productitem__menuitem"><button class="productitem__menulink" data-path="6">Наличие</button></li>
+              <li class="productitem__menuitem"><button class="productitem__menulink" data-path="7">Отзывы</button></li>
 
             </ul>
-
-            <p class="productitem__prodtext">
-              Тяговый литий-ионный аккумулятор LIA Battery LFP (Напряжение АКБ 96V емкость 320 ач) можете купить на сайте компании "ГК Мир
-              Складской Техники" в Екатеринбурге с доставкой в любой регион РФ. Батарея отличается внушительной емкостью 320 Ач с
-              напряжением 96 В. Для оформления заказа позвоните по телефону или оставьте заявку на сайте!
-            </p>
-            <ul class="productitem__propertieslist">
-              <li class="productitem__propertiesitem">
-                BMS с функцией диагностики через Bluetooth
-              </li>
-              <li class="productitem__propertiesitem">
-                Выносной дисплей на проводе
-              </li>
-              <li class="productitem__propertiesitem">
-                Металлический корпус по индивидуальным размерам АКБ заказчика
-              </li>
-              <li class="productitem__propertiesitem">
-                Концевые отводы с совместимыми разъемами (один или два выхода)
-              </li>
-              <li class="productitem__propertiesitem">
-                Противовес для компенсации разницы в весе
-              </li>
-              <li class="productitem__propertiesitem">
-                Предохранительный клапан сброса давления
-              </li>
-            </ul>
+            <div class="productitem__tabwrapper productitem__tabwrapper--active" data-target="1">
+              <p class="productitem__prodtext">
+                ONE
+                Тяговый литий-ионный аккумулятор LIA Battery LFP (Напряжение АКБ 96V емкость 320 ач) можете купить на сайте компании "ГК Мир
+                Складской Техники" в Екатеринбурге с доставкой в любой регион РФ. Батарея отличается внушительной емкостью 320 Ач с
+                напряжением 96 В. Для оформления заказа позвоните по телефону или оставьте заявку на сайте!
+              </p>
+              <ul class="productitem__propertieslist">
+                <li class="productitem__propertiesitem">
+                  BMS с функцией диагностики через Bluetooth
+                </li>
+                <li class="productitem__propertiesitem">
+                  Выносной дисплей на проводе
+                </li>
+                <li class="productitem__propertiesitem">
+                  Металлический корпус по индивидуальным размерам АКБ заказчика
+                </li>
+                <li class="productitem__propertiesitem">
+                  Концевые отводы с совместимыми разъемами (один или два выхода)
+                </li>
+                <li class="productitem__propertiesitem">
+                  Противовес для компенсации разницы в весе
+                </li>
+                <li class="productitem__propertiesitem">
+                  Предохранительный клапан сброса давления
+                </li>
+              </ul>
+            </div>
+            <div class="productitem__tabwrapper" data-target="2">
+              <h3 class="productitem__characteristics">Характеристики</h3>
+                <ul class="productitem__characteristicslist">
+                  <li class="productitem__characteristicsitem"><span>Производитель:</span><span>LIA Battery</span></li>
+                  <li class="productitem__characteristicsitem"><span>Емкость (А*Ч)</span><span>320</span></li>
+                  <li class="productitem__characteristicsitem"><span>Гарантия:</span><span>Стандартная 3 года, расширенная - 5 лет</span></li>
+                  <li class="productitem__characteristicsitem"><span>Тип аккумулятора:</span><span>Тяговый, Литий-ионный</span></li>
+                  <li class="productitem__characteristicsitem"><span>Напряжение (В):</span><span>96</span></li>
+                </ul>              
+            </div>
+            <div class="productitem__tabwrapper productitem__tabwrapperdoc" data-target="3">
+              <p class="productitem__prodtext productitem__prodtextdoc">
+                Тяговый литий-ионный аккумулятор LIA Battery LFP (Напряжение АКБ 96V емкость 320 ач) можете купить на сайте компании "ГК Мир
+                Складской Техники" в Екатеринбурге с доставкой в любой регион РФ. Батарея отличается внушительной емкостью 320 Ач с
+                напряжением 96 В. Для оформления заказа позвоните по телефону или оставьте заявку на сайте!
+              </p>
+              <ul class="productitem__filelist">
+                <li class="productitem__fileitem"><a class="productitem__filelink" href="">Название файла</a></li>
+                <li class="productitem__fileitem"><a class="productitem__filelink" href="">Название файла</a></li>
+                <li class="productitem__fileitem"><a class="productitem__filelink" href="">Название файла</a></li>
+              </ul>
+              <!-- <ul class="productitem__propertieslist">
+                <li class="productitem__propertiesitem">
+                  BMS с функцией диагностики через Bluetooth
+                </li>
+                <li class="productitem__propertiesitem">
+                  Выносной дисплей на проводе
+                </li>
+                <li class="productitem__propertiesitem">
+                  Металлический корпус по индивидуальным размерам АКБ заказчика
+                </li>
+                <li class="productitem__propertiesitem">
+                  Концевые отводы с совместимыми разъемами (один или два выхода)
+                </li>
+                <li class="productitem__propertiesitem">
+                  Противовес для компенсации разницы в весе
+                </li>
+                <li class="productitem__propertiesitem">
+                  Предохранительный клапан сброса давления
+                </li>
+              </ul> -->
+            </div>
+            <div class="productitem__tabwrapper" data-target="4">
+              <p class="productitem__prodtext">
+                4
+                Тяговый литий-ионный аккумулятор LIA Battery LFP (Напряжение АКБ 96V емкость 320 ач) можете купить на сайте компании "ГК Мир
+                Складской Техники" в Екатеринбурге с доставкой в любой регион РФ. Батарея отличается внушительной емкостью 320 Ач с
+                напряжением 96 В. Для оформления заказа позвоните по телефону или оставьте заявку на сайте!
+              </p>
+              <ul class="productitem__propertieslist">
+                <li class="productitem__propertiesitem">
+                  BMS с функцией диагностики через Bluetooth
+                </li>
+                <li class="productitem__propertiesitem">
+                  Выносной дисплей на проводе
+                </li>
+                <li class="productitem__propertiesitem">
+                  Металлический корпус по индивидуальным размерам АКБ заказчика
+                </li>
+                <li class="productitem__propertiesitem">
+                  Концевые отводы с совместимыми разъемами (один или два выхода)
+                </li>
+                <li class="productitem__propertiesitem">
+                  Противовес для компенсации разницы в весе
+                </li>
+                <li class="productitem__propertiesitem">
+                  Предохранительный клапан сброса давления
+                </li>
+              </ul>
+            </div>
+            <div class="productitem__tabwrapper" data-target="5">
+              <p class="productitem__prodtext">
+                5
+                Тяговый литий-ионный аккумулятор LIA Battery LFP (Напряжение АКБ 96V емкость 320 ач) можете купить на сайте компании "ГК Мир
+                Складской Техники" в Екатеринбурге с доставкой в любой регион РФ. Батарея отличается внушительной емкостью 320 Ач с
+                напряжением 96 В. Для оформления заказа позвоните по телефону или оставьте заявку на сайте!
+              </p>
+              <ul class="productitem__propertieslist">
+                <li class="productitem__propertiesitem">
+                  BMS с функцией диагностики через Bluetooth
+                </li>
+                <li class="productitem__propertiesitem">
+                  Выносной дисплей на проводе
+                </li>
+                <li class="productitem__propertiesitem">
+                  Металлический корпус по индивидуальным размерам АКБ заказчика
+                </li>
+                <li class="productitem__propertiesitem">
+                  Концевые отводы с совместимыми разъемами (один или два выхода)
+                </li>
+                <li class="productitem__propertiesitem">
+                  Противовес для компенсации разницы в весе
+                </li>
+                <li class="productitem__propertiesitem">
+                  Предохранительный клапан сброса давления
+                </li>
+              </ul>
+            </div>
+            <div class="productitem__tabwrapper" data-target="6">
+              <p class="productitem__prodtext">
+                6
+                Тяговый литий-ионный аккумулятор LIA Battery LFP (Напряжение АКБ 96V емкость 320 ач) можете купить на сайте компании "ГК Мир
+                Складской Техники" в Екатеринбурге с доставкой в любой регион РФ. Батарея отличается внушительной емкостью 320 Ач с
+                напряжением 96 В. Для оформления заказа позвоните по телефону или оставьте заявку на сайте!
+              </p>
+              <ul class="productitem__propertieslist">
+                <li class="productitem__propertiesitem">
+                  BMS с функцией диагностики через Bluetooth
+                </li>
+                <li class="productitem__propertiesitem">
+                  Выносной дисплей на проводе
+                </li>
+                <li class="productitem__propertiesitem">
+                  Металлический корпус по индивидуальным размерам АКБ заказчика
+                </li>
+                <li class="productitem__propertiesitem">
+                  Концевые отводы с совместимыми разъемами (один или два выхода)
+                </li>
+                <li class="productitem__propertiesitem">
+                  Противовес для компенсации разницы в весе
+                </li>
+                <li class="productitem__propertiesitem">
+                  Предохранительный клапан сброса давления
+                </li>
+              </ul>
+            </div>
+            <div class="productitem__tabwrapper" data-target="7">
+              <h3 class="productitem__reviewsname">Евгения Колчеданцева</h3>
+              <p class="productitem__reviewswork">Руководтель отдела поставок ООО «Дачные работы-86»</p>
+              <p class="productitem__prodtext productitem__prodtextreview">
+                Тяговый литий-ионный аккумулятор LIA Battery LFP (Напряжение АКБ 96V емкость 320 ач) можете купить на сайте компании "ГК Мир
+                Складской Техники" в Екатеринбурге с доставкой в любой регион РФ. Батарея отличается внушительной емкостью 320 Ач с
+                напряжением 96 В. Для оформления заказа позвоните по телефону или оставьте заявку на сайте!
+              </p>
+              <div class="reviewspage__btnwrap">
+                <button class="reviewspage__btn">Оставить&nbsp;отзыв</button>
+              </div>
+            </div>
           </div>
           <h2 class="productitem__interest">Вас может заинтересовать:</h2>
         <ul class="product__list">
@@ -267,9 +502,9 @@
               </div>
               <div class="footer__topright">
                   <ul class="footer__tellist">
-                      <li class="footer__telitem"><a class="footer__tellink" href="">8 (800) 333-12-78</a></li>
-                      <li class="footer__telitem"><a class="footer__tellink" href="">7 (343) 237-24-77</a></li>
-                      <li class="footer__telitem footer__mail"><a class="footer__maillink" href="">info@lia-battery.ru</a></li>
+                      <li class="footer__telitem"><a class="footer__tellink" href="tel:+88003331278">8 (800) 333-12-78</a></li>
+                      <li class="footer__telitem"><a class="footer__tellink" href="tel:+73432372477">7 (343) 237-24-77</a></li>
+                      <li class="footer__telitem footer__mail"><a class="footer__maillink" href="mailto:info@lia-battery.ru">info@lia-battery.ru</a></li>
                       <li class="footer__telitembtn"><button class="footer__btn">Оставить заявку</button></li>
                       <li class="footer__telitem">
                           <ul class="footer__sociallist">

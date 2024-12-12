@@ -134,6 +134,11 @@
         font-size: 18px;
         line-height: 133%;
         color: #000;
+        transition: color .3s ease-in-out;
+    }
+
+    &__navlink:hover{
+        color: #8ec543;
     }
 
    
@@ -202,9 +207,12 @@
         font-size: 18px;
         line-height: 133%;
         color: #000;
+        transition: color .3s ease-in-out;
     }
 
-
+    .menu__link:hover{
+        color: #8ec543;
+    }
 
     .menu__active, .dropdown__active {
         visibility: visible;
